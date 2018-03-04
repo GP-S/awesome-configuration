@@ -1,3 +1,5 @@
+local awful = require("awful")
+local beautiful = require("beautiful")
 local icons = loadrc("icons", "vbe/icons")
 
 awful.rules.rules = {

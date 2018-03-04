@@ -1,3 +1,5 @@
+local beautiful = require("beautiful")
+local awful = require("awful")
 -- Theme
 beautiful.init(awful.util.getdir("config") .. "/rc/theme.lua")
 

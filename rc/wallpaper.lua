@@ -1,3 +1,4 @@
+local awful = require ("awful")
 -- Change wallpaper
 
 local wtimer = timer { timeout = 0 }

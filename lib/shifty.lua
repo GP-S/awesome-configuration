@@ -427,7 +427,7 @@ function add(args)
         local tmr
         local f = function() rename(t); tmr:stop() end
         tmr = capi.timer({timeout = 0.01})
-        tmr:add_signal("timeout", f)
+        tmr:connect_signal("timeout", f)
         tmr:start()
     end
 
@@ -730,7 +730,7 @@ function sweep()
                                tmr:stop()
                             end
                             tmr = capi.timer({timeout = delay})
-                            tmr:add_signal("timeout", f)
+                            tmr:connect_signal("timeout", f)
                             tmr:start()
                         else
                             del(t)
@@ -945,12 +945,12 @@ function completion(cmd, cur_pos, ncomp, sources, matchers)
 end
 
 -- signals
-capi.client.add_signal("manage", match)
-capi.client.add_signal("unmanage", sweep)
-capi.client.remove_signal("manage", awful.tag.withcurrent)
+capi.client.connect_signal("manage", match)
+capi.client.connect_signal("unmanage", sweep)
+capi.client.disconnect_signal("manage", awful.tag.withcurrent)
 
 for s = 1, capi.screen.count() do
-    awful.tag.attached_add_signal(s, "property::selected", sweep)
-    awful.tag.attached_add_signal(s, "tagged", sweep)
+    awful.tag.attached_connect_signal(s, "property::selected", sweep)
+    awful.tag.attached_connect_signal(s, "tagged", sweep)
 end
 

@@ -3,7 +3,7 @@
 -- TODO:
 -- For HiDPI, check the following script:
 --  https://gist.github.com/wvengen/178642bbc8236c1bdb67
-
+local awful = require("awful")
 local icons = loadrc("icons", "vbe/icons")
 
 -- Get active outputs

@@ -1,4 +1,5 @@
 -- Lockscreen
+local awful = require("awful")
 
 local lock = function()
    os.execute("xset s activate")

@@ -1,5 +1,5 @@
 -- Tags
-
+local awful = require("awful")
 local shifty = loadrc("shifty", "vbe/shifty")
 local keydoc = loadrc("keydoc", "vbe/keydoc")
 

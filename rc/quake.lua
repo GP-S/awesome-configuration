@@ -1,3 +1,4 @@
+local awful = require("awful")
 local quake = loadrc("quake", "vbe/quake")
 
 local quakeconsole = {}

@@ -1,9 +1,10 @@
-require("awful")
+local awful = require("awful")
 require("awful.autofocus")
 require("awful.rules")
-require("beautiful")
-require("naughty")
+local beautiful = require("beautiful")
+local naughty = require("naughty")
 
+awful.util = require("awful.util")
 -- Simple function to load additional LUA files from rc/.
 function loadrc(name, mod)
    local success
@@ -63,17 +64,17 @@ config.browser = "firefox"
 -- Remaining modules
 loadrc("xrun")			-- xrun function
 loadrc("appearance")		-- theme and appearance settings
-loadrc("debug")			-- debugging primitive `dbg()`
+--loadrc("debug")			-- debugging primitive `dbg()`
 
 loadrc("start")			-- programs to run on start
 loadrc("bindings")		-- keybindings
-loadrc("wallpaper")		-- wallpaper settings
-loadrc("widgets")		-- widgets configuration
-loadrc("tags")			-- tags handling
-loadrc("xlock")			-- lock screen
-loadrc("signals")		-- window manager behaviour
-loadrc("rules")			-- window rules
-loadrc("quake")			-- quake console
-loadrc("xrandr")		-- xrandr menu
+--loadrc("wallpaper")		-- wallpaper settings
+--loadrc("widgets")		-- widgets configuration
+--loadrc("tags")			-- tags handling
+--loadrc("xlock")			-- lock screen
+--loadrc("signals")		-- window manager behaviour
+--loadrc("rules")			-- window rules
+--loadrc("quake")			-- quake console
+--loadrc("xrandr")		-- xrandr menu
 
 root.keys(config.keys.global)

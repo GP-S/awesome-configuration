@@ -4,7 +4,7 @@ require("vicious")
 local icons = loadrc("icons", "vbe/icons")
 
 -- Separators
-local sepopen = widget({ type = "imagebox" })
+local sepopen = wibox.widget({ type = "imagebox" })
 sepopen.image = image(beautiful.icons .. "/widgets/left.png")
 local sepclose = widget({ type = "imagebox" })
 sepclose.image = image(beautiful.icons .. "/widgets/right.png")
